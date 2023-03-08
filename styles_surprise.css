@@ -1,16 +1,45 @@
-#surprise{
+body{
   background-color: #ff3e68;
-  width: 100%;
-  height: 100vh;
+}
+#surprise{
+background-color: #ff3e68;
+  width: 1440px;
+  height: 1900px;
   font-family: 'Lilita One', cursive;
 
 }
+
 .surprise h1{
   text-align: center;
-  font-size: 9rem;
+  font-size: 18rem;
   color: #fffef5;
   position: relative;
-  top:300px;
+  top:-50px;
+  z-index: 0;
+}
+.surprise img{
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 80px;
+}
+#carouselExample{
+  width: 100%;
+  text-align: center;
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 1000px;
 
 
+}
+.carousel-item{
+  padding: 10% 17%;
+}
+
+.carousel-item h2{
+  font-size: 2.4rem;
+}
+.carousel-item h1{
+  font-size: 1.5rem;
 }
