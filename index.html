@@ -1,112 +1,185 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>21st Marriage anniversary</title>
-    <link href="https://fonts.cdnfonts.com/css/lostar" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Chivo+Mono:wght@500&family=Merriweather:wght@300;900&family=Montserrat:wght@300&family=Quicksand:wght@300&family=Sacramento&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <section id="on_landing1st" >
+<head>
+  <meta charset="utf-8">
+  <title>21st Marriage anniversary</title>
+  <link href="https://fonts.cdnfonts.com/css/lostar" rel="stylesheet">
 
-      <!-- Nav Bar -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Chivo+Mono:wght@500&family=Merriweather:wght@300;900&family=Montserrat:wght@300&family=Quicksand:wght@300&family=Sacramento&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Mar 8, 2002 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = now - countDownDate;
+
+      // Time calculations for days, hours, minutes and seconds
+      var years = Math.floor(days / 365);
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var day = Math.floor((days) % 365.25 % 30.4);
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      var years = Math.floor(days / 365);
+      var months = Math.floor((days % 365) / 30.4);
+      console.log("DAYS", days, "YEARS" , years)
+
+      // Output the result in an element with id="demo"
+      document.getElementById("years").innerHTML = years + " Years";
+      document.getElementById("months").innerHTML = months + " Months"
+      document.getElementById("days").innerHTML = day + " Days"
+      document.getElementById("hours").innerHTML = hours + ":";
+      document.getElementById("minutes").innerHTML = minutes + ":";
+      document.getElementById("seconds").innerHTML = seconds;
+
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    console.log("SCRIPT RUNNING")
+  </script>
+</head>
+
+<body>
+  <section id="on_landing1st">
+
+    <!-- Nav Bar -->
 
 
-<nav class="navbar navbar-expand-lg navbar-dark navigation">
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navar1" aria-controls="navar1" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-lg navbar-dark navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navar1"
+        aria-controls="navar1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse menu" id="navar1">
+      <div class="collapse navbar-collapse menu" id="navar1">
 
 
 
         <ul class="navbar-nav ms-auto">
-        <li class="nav-item ">
-             <a class="nav-link" href="#footer">Eternal Clock</a>
-        </li>
-        <li class="nav-item">
-             <a class="nav-link" href="timeline.html">Timeline</a>
-        </li>
-        <li class="nav-item">
-             <a class="nav-link" href="surprise.html">Surprise</a>
-        </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#footer">Eternal Clock</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="timeline.html">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="surprise.html">Surprise</a>
+          </li>
 
         </ul>
+      </div>
+    </nav>
+
+    <!-- main body intro-->
+    <div class="row">
+      <div class="firstpart container-fluid">
+        <div class="col">
+          <img src="happy.svg" alt="happy word" class="happy">
+          <div class="twenty">
+            <h1 class="twenty1st">21st</h1>
+          </div>
+
+        </div>
+        <div class="">
+          <h1 class="marr_ann">MARRIAGE ANNIVERSARY</h1>
+        </div>
+        <img src="IMG_1428-removebg.png" class="mumpapbg" alt="">
+        <div class="cheque-images">
+          <img src="stickers-01.png" class="badge21" alt="">
+          <img src="stickers-04.png" class="months252" alt="">
+          <img src="stickers-02.png" class="lastlonging" alt="">
+          <img src="stickers-03.png" class="bestparents" alt="">
+          <img src="stickers-05.png" class="timetogether" alt="">
+        </div>
+
+
+
+        <img class="bg_main" src="happy-01-01.svg" alt="cheque pattern">
+
+
+
+
+
+      </div>
     </div>
-</nav>
-
-      <!-- main body intro-->
-      <div class="row">
-        <div class="firstpart container-fluid"  >
-          <div class="col">
-            <img src="happy.svg" alt="happy word" class="happy">
-            <div class="twenty">
-                <h1 class="twenty1st">21st</h1>
-            </div>
-
-          </div>
-          <div class="">
-            <h1 class="marr_ann">MARRIAGE ANNIVERSARY</h1>
-          </div>
-          <img src="IMG_1428-removebg.png" class="mumpapbg" alt="">
-          <div class="cheque-images">
-            <img src="stickers-01.png" class="badge21" alt="">
-            <img src="stickers-04.png" class="months252" alt="">
-            <img src="stickers-02.png" class="lastlonging" alt="">
-            <img src="stickers-03.png" class="bestparents" alt="">
-            <img src="stickers-05.png" class="timetogether" alt="">
-          </div>
 
 
 
-          <img class="bg_main" src="happy-01-01.svg" alt="cheque pattern">
+  </section>
 
+  <section id="gallery">
 
+    <h1 class="gal">GALLERY</h1>
 
-
-
+    <div class="container">
+      <div class="img-gallery">
+        <div class="img-box">
+          <h3>Kanpur</h3>
+        </div>
+        <div class="img-box">
+          <h3>Sikkim</h3>
+        </div>
+        <div class="img-box">
+          <h3>darjeeling</h3>
+        </div>
+        <div class="img-box">
+          <h3>Chandikheda</h3>
+        </div>
+        <div class="img-box">
+          <h3>Jatashankar</h3>
+        </div>
+        <div class="img-box">
+          <h3>Helipad, Pachmarhi</h3>
+        </div>
+        <div class="img-box">
+          <h3>Mawlynnong</h3>
+        </div>
+        <div class="img-box">
+          <h3>Shillong Cantt</h3>
         </div>
       </div>
-
-
-
-    </section>
-
-    <section id="gallery">
-
-        <h1 class="gal">GALLERY</h1>
-
-      <div class="container">
-        <div class="img-gallery">
-          <div class="img-box"><h3>Kanpur</h3></div>
-          <div class="img-box"><h3>Sikkim</h3></div>
-          <div class="img-box"><h3>darjeeling</h3></div>
-          <div class="img-box"><h3>Chandikheda</h3></div>
-          <div class="img-box"><h3>Jatashankar</h3></div>
-          <div class="img-box"><h3>Helipad, Pachmarhi</h3></div>
-          <div class="img-box"><h3>Mawlynnong</h3></div>
-          <div class="img-box"><h3>Shillong Cantt</h3></div>
-        </div>
-      </div>
+    </div>
 
 
 
 
 
-    </section>
+  </section>
 
-    <section id="eclock">
-      <div class="clock">
-        <h1>Eternal Clock</h1>
+  <section id="eclock">
+    <div class="clock">
+      <h1>Eternal Clock</h1>
+      <div class="timer">
+        <p id="years"></p>
+        <p id="months"></p>
+        <p id="days"></p>
+        <p id="hours"></p>
+        <p id="minutes"></p>
+        <p id="seconds"></p>
 
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+</body>
+
 </html>
